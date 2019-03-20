@@ -1,0 +1,6 @@
+framework module PESDK {
+  umbrella header "PESDK.h"
+
+  export *
+  module * { export * }
+}

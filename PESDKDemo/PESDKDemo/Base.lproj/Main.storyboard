@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcv-rs-M6D">
+                                <rect key="frame" x="87.5" y="220" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="TkD-WZ-930"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2dY-1M-wiI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixp-ai-j7k">
+                                <rect key="frame" x="87.5" y="274" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="transfer"/>
+                                <connections>
+                                    <action selector="transferAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QMg-TP-l54"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMt-1D-vdt">
+                                <rect key="frame" x="87.5" y="328" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="pushTransaction"/>
+                                <connections>
+                                    <action selector="pushTransactionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="flH-Ed-kG3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ixp-ai-j7k" firstAttribute="height" secondItem="Bcv-rs-M6D" secondAttribute="height" id="3yz-7r-pfK"/>
+                            <constraint firstItem="ixp-ai-j7k" firstAttribute="centerX" secondItem="Bcv-rs-M6D" secondAttribute="centerX" id="C5K-wU-0Yt"/>
+                            <constraint firstItem="Bcv-rs-M6D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Dd8-Yg-BSj"/>
+                            <constraint firstItem="TMt-1D-vdt" firstAttribute="top" secondItem="ixp-ai-j7k" secondAttribute="bottom" constant="20" id="LU1-7s-XRz"/>
+                            <constraint firstItem="TMt-1D-vdt" firstAttribute="centerX" secondItem="Bcv-rs-M6D" secondAttribute="centerX" id="ZMW-Vp-sVT"/>
+                            <constraint firstItem="TMt-1D-vdt" firstAttribute="width" secondItem="Bcv-rs-M6D" secondAttribute="width" id="aRK-IB-v1a"/>
+                            <constraint firstItem="ixp-ai-j7k" firstAttribute="top" secondItem="Bcv-rs-M6D" secondAttribute="bottom" constant="20" id="hMW-IL-ejD"/>
+                            <constraint firstItem="Bcv-rs-M6D" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qb2-e5-3XA"/>
+                            <constraint firstItem="ixp-ai-j7k" firstAttribute="width" secondItem="Bcv-rs-M6D" secondAttribute="width" id="tsQ-WT-suf"/>
+                            <constraint firstItem="TMt-1D-vdt" firstAttribute="height" secondItem="Bcv-rs-M6D" secondAttribute="height" id="uQe-mD-cbw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

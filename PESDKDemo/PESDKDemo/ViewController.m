@@ -19,11 +19,10 @@
     PEReq *req = [[PEReq alloc] init];
     req.dappIcon = @"https://pic4.zhimg.com/80/v2-f49c0e9b51f0ed31a683da5e60b8b52b_hd.jpg";
     req.dappName = @"PESDKDemo";
-    req.expired  = @(13333333333);
+    req.expired  = @(1569895200);
     req.blockchain = PEBlockChainEOS;
     req.action   = @"login";
     req.serialNumber   = @"10001";
-    req.callback = @"https://www.baidu.com?a=b&v=c";
     req.desc = @"上链备注";
     
     [PEApi sendReq:req];
@@ -32,7 +31,7 @@
     PETransferReq *req = [[PETransferReq alloc] init];
     req.dappIcon = @"https://pic4.zhimg.com/80/v2-f49c0e9b51f0ed31a683da5e60b8b52b_hd.jpg";
     req.dappName = @"PESDKDemo";
-    req.expired  = @(13333333333);
+    req.expired  = @(1569895200);
     req.blockchain = PEBlockChainEOS;
     req.action   = @"transfer";
     req.serialNumber   = @"10002";
@@ -52,7 +51,7 @@
     PEPushActionReq *req = [[PEPushActionReq alloc] init];
     req.dappIcon = @"https://pic4.zhimg.com/80/v2-f49c0e9b51f0ed31a683da5e60b8b52b_hd.jpg";
     req.dappName = @"PESDKDemo";
-    req.expired  = @(13333333333);
+    req.expired  = @(1569895200);
     req.blockchain = PEBlockChainEOS;
     req.action   = @"pushTransactions";
     req.serialNumber   = @"10003";

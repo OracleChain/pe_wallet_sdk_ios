@@ -23,6 +23,7 @@
     req.blockchain = PEBlockChainEOS;
     req.action   = @"login";
     req.serialNumber   = @"10001";
+    req.callback = @"https://www.baidu.com?a=b&v=c";
     req.desc = @"上链备注";
     
     [PEApi sendReq:req];
@@ -39,7 +40,7 @@
     
     req.from = @"zhoiyingbind";
     req.to   = @"zhouyingbinc";
-    req.amount = @"0.001";
+    req.amount = @"0.0001";
     req.precision = @"4";
     req.symbol = @"EOS";
     req.contract = @"eosio.token";
@@ -53,7 +54,7 @@
     req.dappName = @"PESDKDemo";
     req.expired  = @(13333333333);
     req.blockchain = PEBlockChainEOS;
-    req.action   = @"pushActions";
+    req.action   = @"pushTransactions";
     req.serialNumber   = @"10003";
     req.desc = @"上链备注";
     

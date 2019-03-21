@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, PERespStatus){
-    PERespStatusCanceled = 0,
-    PERespStatusSuccess,
-    PERespStatusFailure,
+typedef NS_ENUM(NSUInteger, PERespResult){
+    PERespResultCanceled = 0,
+    PERespResultSuccess,
+    PERespResultFailure,
 };
 
 @interface PEResp : NSObject
@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, PERespStatus){
 /**
  操作执行状态
  */
-@property (assign, nonatomic) PERespStatus status;
+@property (assign, nonatomic) PERespResult result;
 
 /**
  返回的信息

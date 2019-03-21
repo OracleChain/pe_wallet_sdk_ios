@@ -15,13 +15,12 @@ typedef NS_ENUM(NSUInteger,PEBlockChain){
 
 /*! @class   PEReq
  * @abstract 发起请求的基本数据
- * @discuss 发起请求时只发送SDK内部的PEReq子类;
  */
 @interface PEReq : NSObject
 
 
 /**
- 协议名，钱包用来区分不同协议，本协议为 SimpleWallet
+ 协议名，钱包用来区分不同协议，本协议为 pe_sdk
  */
 @property (nonatomic, copy, readonly) NSString *protocol;
 
@@ -49,7 +48,7 @@ typedef NS_ENUM(NSUInteger,PEBlockChain){
 @property (nonatomic, assign) PEBlockChain blockchain;
 
 /**
- action 可选login，sign,transfer ,pushActions
+ action 可选login,transfer ,pushTransactions
  */
 @property (nonatomic, copy) NSString *action;
 
@@ -59,17 +58,12 @@ typedef NS_ENUM(NSUInteger,PEBlockChain){
 @property (nonatomic, copy) NSString *serialNumber;
 
 /**
- 回调url，通过此url 将txId和actionId通过post请求告诉dappServer
+ 回调url，通过此url 将txId和serialNumber通过get请求告诉dappServer
  */
 @property (nonatomic, copy) NSString *callback;
 
 /**
- * 转账时:
- * @abstract 由dapp生成的业务参数信息，需要钱包在转账时附加在memo中发出去;
- * @discuss  格式为:k1=v1&k2=v2; 钱包转账时还可附加ref参数标明来源;   <可选>
- *           如:k1=v1&k2=v2&ref=walletname
- * 登录时:
- *      作为附加展示信息
+ * 附加信息
  */
 @property (nonatomic, copy) NSString *desc;
 
@@ -125,9 +119,9 @@ typedef NS_ENUM(NSUInteger,PEBlockChain){
  */
 @property (nonatomic, copy) NSString *contract;
 
-/*!
- * @abstract 交易的说明信息，钱包在付款UI展示给用户
- * @discuss  最长不要超过128个字节;
+
+/**
+ 交易附言
  */
 @property (nonatomic, copy) NSString *memo;
 

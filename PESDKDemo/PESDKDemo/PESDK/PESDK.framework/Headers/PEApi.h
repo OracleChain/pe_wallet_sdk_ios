@@ -34,9 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*!
  * @brief 注册ID
- * @param AppID a) 请确保AppID已经添加在Xcode工程info.plist-> URL types -> URL Schemes里!
- *              b) AppID也作为App回调时的URL跳转, 务必设置好AppID!
- *              c) 为了避免误操作其他App的跳转请求，请设置一个唯一的appID给TPSDK, 建议为各个SDK添加命名后缀, 如xxxfortpsdk;
+ * @param AppID 为info->URL types中注册的url schemes
  */
 + (void)registerAppID:(NSString *)AppID;
 

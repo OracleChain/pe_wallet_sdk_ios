@@ -51,7 +51,7 @@ window.location.href = "pocketeos://?param='%7B%0A%20%20%22action%22%20:%20%22lo
 
 ```
 
-⚠️：web调用iOS端PE所用参数需与iOSPESDK保持一致
+⚠️：**web调用iOS端PE所用参数需与iOSPESDK保持一致 具体参数说明请查看PESDK注释**
 
 ### 回调结果处理
 
@@ -65,7 +65,74 @@ window.location.href = "pocketeos://?param='%7B%0A%20%20%22action%22%20:%20%22lo
 }
 ```
 
+### 回调结果示例
+
+####取消/失败
+
+```json
+{
+    //根据action判断行为
+	"action": "login/transfer/pushTransactions",
+	"message": "Cancel/Failre",
+	"protocol": "pe_sdk",
+	"ref": "PocketECO",
+	"serialNumber": "app_123452312121",
+	"version": "1.0"
+}
+```
 
 
 
+#### login成功
+
+```json
+{
+	account = "zhoiyingbind",
+	ref = "PocketECO",
+	protocol = "pe_sdk",
+	action = "login",
+    result = 1,
+	serialNumber = "10001",
+	public_key = "EOS5T4N5nMpV6hR8BctkAFoL3mZyyuRrW6dpZVdBA8t3MkByB3ouV",
+	version = "1.0",
+	sign = "SIG_K1_KknA1Lq8YrpP3GBgSd8vXyihxvgdgipwC4y3kKp3MraWKXqaj5fJs8cza3fsQ5yUzy2PfTpEWKoJoZNw55qdYS1KrVS5TZ",
+	timestamp = 1553223454310,
+}
+```
+
+
+
+#### transfer成功
+
+```json
+{
+	action = "transfer",
+	ref = "PocketECO",
+	protocol = "pe_sdk",
+	serialNumber = "10002",
+	result = 1,
+	message = "ok",
+	version = "1.0",
+	timestamp = 1553223694214,
+	txID = "62d14716681197f80950001b22522a00202427d216d25c4725da3ea44427f486",
+}
+```
+
+
+
+#### pushTransactions成功
+
+```json
+{
+	action = "pushTransactions",
+	ref = "PocketECO",
+	protocol = "pe_sdk",
+	serialNumber = "10003",
+	result = 1,
+	message = "ok",
+	version = "1.0",
+	timestamp = 1553223802747,
+	txID = "7849fd2d77c063b0bdc3a73c9f1472eaf83e3a00cd7eae4cdef4461ef2e30093",
+}
+```
 

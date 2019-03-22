@@ -71,13 +71,12 @@ window.location.href = "pocketeos://?param='%7B%0A%20%20%22action%22%20:%20%22lo
 
 ```
 {
-    //根据action判断行为
-	"action": "login/transfer/pushTransactions",
-	"message": "Cancel/Failre",
-	"protocol": "pe_sdk",
-	"ref": "PocketECO",
-	"serialNumber": "app_123452312121",
-	"version": "1.0"
+	result = 0,
+	ref = "PocketECO",
+	action = "login/transfer/pushTransactions",
+	protocol = "pe_sdk",
+	serialNumber = "10001",
+	version = "1.0",
 }
 ```
 

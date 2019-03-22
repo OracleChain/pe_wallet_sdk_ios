@@ -67,9 +67,9 @@ window.location.href = "pocketeos://?param='%7B%0A%20%20%22action%22%20:%20%22lo
 
 ### 回调结果示例
 
-####取消/失败
+#### 取消/失败
 
-```json
+```
 {
     //根据action判断行为
 	"action": "login/transfer/pushTransactions",
@@ -85,7 +85,7 @@ window.location.href = "pocketeos://?param='%7B%0A%20%20%22action%22%20:%20%22lo
 
 #### login成功
 
-```json
+```objective-c
 {
 	account = "zhoiyingbind",
 	ref = "PocketECO",
@@ -104,7 +104,7 @@ window.location.href = "pocketeos://?param='%7B%0A%20%20%22action%22%20:%20%22lo
 
 #### transfer成功
 
-```json
+```objective-c
 {
 	action = "transfer",
 	ref = "PocketECO",
@@ -122,7 +122,7 @@ window.location.href = "pocketeos://?param='%7B%0A%20%20%22action%22%20:%20%22lo
 
 #### pushTransactions成功
 
-```json
+```objective-c
 {
 	action = "pushTransactions",
 	ref = "PocketECO",
